@@ -51,6 +51,15 @@ public class Alumno {
     public void setMaterias(HashSet<Materia> materias) {
         this.materias = materias;
     }
+    public void agregarMateria(Materia materia){
+        if(!materia.getNombre().isEmpty()){
+            materias.add(materia);
+        }
+    }
+    public int contidadMaterias(){
+       int cantidad = materias.size();
+        return cantidad;
+    }
 
     @Override
     public String toString() {
