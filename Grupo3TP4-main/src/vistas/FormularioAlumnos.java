@@ -51,9 +51,21 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         jLabel4.setForeground(new java.awt.Color(0, 102, 255));
         jLabel4.setText("Nombre:");
 
+        jTLegajo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTLegajoActionPerformed(evt);
+            }
+        });
+
         jTApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTApellidoActionPerformed(evt);
+            }
+        });
+
+        jTNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTNombreActionPerformed(evt);
             }
         });
 
@@ -62,6 +74,11 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
 
         jBGuardarAL.setForeground(new java.awt.Color(0, 102, 255));
         jBGuardarAL.setText("Guardar");
+        jBGuardarAL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBGuardarALActionPerformed(evt);
+            }
+        });
 
         jBNuevoAL.setForeground(new java.awt.Color(0, 102, 255));
         jBNuevoAL.setText("Nuevo");
@@ -81,10 +98,11 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
                         .addComponent(jBSalirAL))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTLegajo, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -105,11 +123,11 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBNuevoAL)
                     .addComponent(jBGuardarAL)
@@ -123,6 +141,18 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
     private void jTApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTApellidoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTApellidoActionPerformed
+
+    private void jTLegajoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTLegajoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTLegajoActionPerformed
+
+    private void jTNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTNombreActionPerformed
+
+    private void jBGuardarALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarALActionPerformed
+        
+    }//GEN-LAST:event_jBGuardarALActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

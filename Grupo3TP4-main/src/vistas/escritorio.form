@@ -28,6 +28,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agregar Materia"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMIgregarMateriaActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -40,6 +43,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Inscribirse"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -47,6 +53,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Salir"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMSalirActionPerformed"/>
+          </Events>
         </Menu>
       </SubComponents>
     </Menu>
@@ -75,7 +84,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
+              <Component id="jDEscritorio" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -84,13 +93,13 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
+              <Component id="jDEscritorio" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JDesktopPane" name="jDesktopPane1">
+    <Container class="javax.swing.JDesktopPane" name="jDEscritorio">
 
       <Layout>
         <DimensionLayout dim="0">

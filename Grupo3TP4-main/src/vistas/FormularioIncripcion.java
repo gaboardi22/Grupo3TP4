@@ -4,6 +4,9 @@
  */
 package vistas;
 
+import Entidades.Alumno;
+import Entidades.Materia;
+
 /**
  *
  * @author Usuario
@@ -54,11 +57,13 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
         jLabel2.setText("Elija una Materia: ");
 
         jLabel3.setForeground(new java.awt.Color(0, 102, 255));
-        jLabel3.setText("Elija un Alimno:");
+        jLabel3.setText("Elija un Alumno:");
 
-        jCBoxMateria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jCBoxAlumno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCBoxMateria.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCBoxMateriaItemStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,12 +116,16 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jBGuardarInsActionPerformed
 
+    private void jCBoxMateriaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBoxMateriaItemStateChanged
+        
+    }//GEN-LAST:event_jCBoxMateriaItemStateChanged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBGuardarIns;
     private javax.swing.JButton jBSalirIns;
-    private javax.swing.JComboBox<String> jCBoxAlumno;
-    private javax.swing.JComboBox<String> jCBoxMateria;
+    private javax.swing.JComboBox<Alumno> jCBoxAlumno;
+    private javax.swing.JComboBox<Materia> jCBoxMateria;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
