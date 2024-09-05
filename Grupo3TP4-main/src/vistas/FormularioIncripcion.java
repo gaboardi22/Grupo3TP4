@@ -113,10 +113,11 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBGuardarInsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarInsActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jBGuardarInsActionPerformed
 
     private void jCBoxMateriaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBoxMateriaItemStateChanged
+        
         
     }//GEN-LAST:event_jCBoxMateriaItemStateChanged
 

@@ -139,15 +139,15 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTApellidoActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jTApellidoActionPerformed
 
     private void jTLegajoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTLegajoActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jTLegajoActionPerformed
 
     private void jTNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTNombreActionPerformed
 
     private void jBGuardarALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarALActionPerformed

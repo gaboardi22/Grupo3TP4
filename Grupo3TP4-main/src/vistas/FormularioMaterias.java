@@ -136,15 +136,15 @@ public class FormularioMaterias extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTNombreMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreMateriaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTNombreMateriaActionPerformed
 
     private void jTAñoMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTAñoMateriaActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jTAñoMateriaActionPerformed
 
     private void jTCodMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCodMateriaActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jTCodMateriaActionPerformed
 
 
