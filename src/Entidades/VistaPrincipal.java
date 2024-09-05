@@ -14,6 +14,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
      * Creates new form VistaPrincipal
      */
     public VistaPrincipal() {
+       
         initComponents();
     }
 
@@ -26,21 +27,81 @@ public class VistaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        escritorio = new javax.swing.JDesktopPane();
+        jMenuBar = new javax.swing.JMenuBar();
+        jMAlumno = new javax.swing.JMenu();
+        jMIAgregarAlumno = new javax.swing.JMenuItem();
+        jMMaterias = new javax.swing.JMenu();
+        jMRegistro = new javax.swing.JMenu();
+        jMSalir = new javax.swing.JMenu();
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
+        escritorio.setLayout(escritorioLayout);
+        escritorioLayout.setHorizontalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        escritorioLayout.setVerticalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 277, Short.MAX_VALUE)
+        );
+
+        jMAlumno.setText("Alumno");
+
+        jMIAgregarAlumno.setText("Agregar Alumno");
+        jMIAgregarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMIAgregarAlumnoActionPerformed(evt);
+            }
+        });
+        jMAlumno.add(jMIAgregarAlumno);
+
+        jMenuBar.add(jMAlumno);
+
+        jMMaterias.setText("Materia");
+        jMenuBar.add(jMMaterias);
+
+        jMRegistro.setText("Registro");
+        jMenuBar.add(jMRegistro);
+
+        jMSalir.setText("Salir");
+        jMenuBar.add(jMSalir);
+
+        setJMenuBar(jMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(escritorio)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(escritorio)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMIAgregarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIAgregarAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMIAgregarAlumnoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +139,13 @@ public class VistaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane escritorio;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JMenu jMAlumno;
+    private javax.swing.JMenuItem jMIAgregarAlumno;
+    private javax.swing.JMenu jMMaterias;
+    private javax.swing.JMenu jMRegistro;
+    private javax.swing.JMenu jMSalir;
+    private javax.swing.JMenuBar jMenuBar;
     // End of variables declaration//GEN-END:variables
 }
