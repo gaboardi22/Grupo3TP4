@@ -1,6 +1,9 @@
 
 package vistas;
 
+import Entidades.Alumno;
+import java.util.HashSet;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -9,9 +12,14 @@ import javax.swing.table.DefaultTableModel;
  */
 public class FormularioAlumnos extends javax.swing.JInternalFrame {
         DefaultTableModel modelo = new DefaultTableModel();
+        public static HashSet<Alumno>alumnos;
     public FormularioAlumnos() {
+        alumnos = new HashSet<>();
         initComponents();
         armarCabecera();
+        cargarTabla();
+      
+       
     }
 
     /**
@@ -83,6 +91,11 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
 
         jBNuevoAL.setForeground(new java.awt.Color(0, 102, 255));
         jBNuevoAL.setText("Nuevo");
+        jBNuevoAL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNuevoALActionPerformed(evt);
+            }
+        });
 
         jTAlumnos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -175,6 +188,22 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_jBGuardarALActionPerformed
 
+    private void jBNuevoALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoALActionPerformed
+        try{
+           int legajo = Integer.parseInt(jTLegajo.getText());
+           String apellido = jTApellido.getText();
+           String nombre = jTNombre.getText();
+           Alumno nuevoAlumno = new Alumno(legajo, apellido, nombre);
+           alumnos.add(nuevoAlumno);
+           cargarTabla();
+           jTLegajo.setText("");
+           jTApellido.setText("");
+           jTNombre.setText("");
+        }catch(NumberFormatException  ex){
+         JOptionPane.showMessageDialog(this, "La matricula debe ser un numero");
+    }
+    }//GEN-LAST:event_jBNuevoALActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBGuardarAL;
@@ -196,5 +225,14 @@ private void armarCabecera(){
     modelo.addColumn("NOMBRE");
     jTAlumnos.setModel(modelo);
 }
-
+private void cargarTabla(){
+    modelo.setRowCount(0);
+    for (Alumno alumno : alumnos) {
+        modelo.addRow(new Object[]{
+            alumno.getLegajo(),
+            alumno.getApellido(),
+            alumno.getNombre()
+        });
+    }
+}
 }

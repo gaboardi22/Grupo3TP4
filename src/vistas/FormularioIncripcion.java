@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
+
 package vistas;
 
 import Entidades.Alumno;
@@ -9,13 +6,11 @@ import Entidades.Materia;
 
 /**
  *
- * @author Usuario
+ * @author Grupo 3
  */
 public class FormularioIncripcion extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form FormularioIncripcion
-     */
+ 
     public FormularioIncripcion() {
         initComponents();
     }
@@ -62,6 +57,17 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
         jCBoxMateria.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jCBoxMateriaItemStateChanged(evt);
+            }
+        });
+        jCBoxMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCBoxMateriaActionPerformed(evt);
+            }
+        });
+
+        jCBoxAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCBoxAlumnoActionPerformed(evt);
             }
         });
 
@@ -121,6 +127,14 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_jCBoxMateriaItemStateChanged
 
+    private void jCBoxMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBoxMateriaActionPerformed
+        
+    }//GEN-LAST:event_jCBoxMateriaActionPerformed
+
+    private void jCBoxAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBoxAlumnoActionPerformed
+        
+    }//GEN-LAST:event_jCBoxAlumnoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBGuardarIns;
@@ -131,4 +145,8 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
+private void crgarComboAlumnos(){
+   
+}
+
 }
