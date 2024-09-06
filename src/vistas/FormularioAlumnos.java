@@ -60,24 +60,6 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         jLabel4.setForeground(new java.awt.Color(0, 102, 255));
         jLabel4.setText("Nombre:");
 
-        jTLegajo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTLegajoActionPerformed(evt);
-            }
-        });
-
-        jTApellido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTApellidoActionPerformed(evt);
-            }
-        });
-
-        jTNombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTNombreActionPerformed(evt);
-            }
-        });
-
         jBSalirAL.setForeground(new java.awt.Color(0, 102, 255));
         jBSalirAL.setText("Salir");
 
@@ -115,39 +97,41 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(39, 39, 39)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTNombre)
+                                .addComponent(jTApellido)
+                                .addComponent(jTLegajo)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(31, 31, 31)
+                            .addComponent(jBGuardarAL)
+                            .addGap(57, 57, 57)
+                            .addComponent(jBNuevoAL)
+                            .addGap(55, 55, 55)
+                            .addComponent(jBSalirAL)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTNombre)
-                            .addComponent(jTApellido)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jTLegajo)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jBGuardarAL)
-                                .addGap(57, 57, 57)
-                                .addComponent(jBNuevoAL)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jBSalirAL))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(27, Short.MAX_VALUE))
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jTLegajo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -172,36 +156,41 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTApellidoActionPerformed
-       
-    }//GEN-LAST:event_jTApellidoActionPerformed
-
-    private void jTLegajoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTLegajoActionPerformed
-       
-    }//GEN-LAST:event_jTLegajoActionPerformed
-
-    private void jTNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreActionPerformed
-        
-    }//GEN-LAST:event_jTNombreActionPerformed
-
     private void jBGuardarALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarALActionPerformed
-        
-    }//GEN-LAST:event_jBGuardarALActionPerformed
-
-    private void jBNuevoALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoALActionPerformed
         try{
            int legajo = Integer.parseInt(jTLegajo.getText());
            String apellido = jTApellido.getText();
            String nombre = jTNombre.getText();
-           Alumno nuevoAlumno = new Alumno(legajo, apellido, nombre);
-           alumnos.add(nuevoAlumno);
-           cargarTabla();
+           int confirmacion = JOptionPane.showInternalConfirmDialog(this, "¿los datos ingresados son correcto?");
+           if (confirmacion == JOptionPane.YES_OPTION) {
+               Alumno nuevoAlumno = new Alumno(legajo, apellido, nombre);
+               alumnos.add(nuevoAlumno);
+               cargarTabla();
+           } else {
+               JOptionPane.showMessageDialog(this, "Porfavor vuelva a cargar los datos");
+               jTLegajo.setText("");
+               jTApellido.setText("");
+               jTNombre.setText("");
+           }
+        }catch(NumberFormatException  ex){
+          JOptionPane.showMessageDialog(this, "La matricula debe ser un numero");
+        }
+    }//GEN-LAST:event_jBGuardarALActionPerformed
+
+    private void jBNuevoALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoALActionPerformed
+//        try{
+//           int legajo = Integer.parseInt(jTLegajo.getText());
+//           String apellido = jTApellido.getText();
+//           String nombre = jTNombre.getText();
+//           Alumno nuevoAlumno = new Alumno(legajo, apellido, nombre);
+//           alumnos.add(nuevoAlumno);
+//           cargarTabla();
            jTLegajo.setText("");
            jTApellido.setText("");
            jTNombre.setText("");
-        }catch(NumberFormatException  ex){
-         JOptionPane.showMessageDialog(this, "La matricula debe ser un numero");
-    }
+//        }catch(NumberFormatException  ex){
+//         JOptionPane.showMessageDialog(this, "La matricula debe ser un numero");
+//    }
     }//GEN-LAST:event_jBNuevoALActionPerformed
 
 
