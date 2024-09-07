@@ -45,6 +45,8 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
         jTAlumnos = new javax.swing.JTable();
 
         setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 255));
@@ -62,6 +64,11 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
 
         jBSalirAL.setForeground(new java.awt.Color(0, 102, 255));
         jBSalirAL.setText("Salir");
+        jBSalirAL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSalirALActionPerformed(evt);
+            }
+        });
 
         jBGuardarAL.setForeground(new java.awt.Color(0, 102, 255));
         jBGuardarAL.setText("Guardar");
@@ -90,6 +97,7 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTAlumnos.setEnabled(false);
         jScrollPane1.setViewportView(jTAlumnos);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -124,7 +132,7 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(73, 73, 73)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,7 +158,7 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
                     .addComponent(jBGuardarAL)
                     .addComponent(jBNuevoAL)
                     .addComponent(jBSalirAL))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();
@@ -192,6 +200,10 @@ public class FormularioAlumnos extends javax.swing.JInternalFrame {
 //         JOptionPane.showMessageDialog(this, "La matricula debe ser un numero");
 //    }
     }//GEN-LAST:event_jBNuevoALActionPerformed
+
+    private void jBSalirALActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirALActionPerformed
+      dispose();
+    }//GEN-LAST:event_jBSalirALActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

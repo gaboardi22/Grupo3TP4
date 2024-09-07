@@ -32,6 +32,8 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
         jCBoxMateria = new javax.swing.JComboBox<>();
         jCBoxAlumno = new javax.swing.JComboBox<>();
 
+        setClosable(true);
+
         jBSalirIns.setForeground(new java.awt.Color(0, 102, 255));
         jBSalirIns.setText("Salir");
 

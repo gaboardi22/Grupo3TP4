@@ -65,6 +65,4 @@ public class Alumno {
     public String toString() {
         return "Alumno{" + "legajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + ", materias=" + materias + '}';
     }
-    
-    
 }
