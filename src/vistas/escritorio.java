@@ -134,7 +134,7 @@ public class escritorio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMSalirActionPerformed
-
+      
     }//GEN-LAST:event_jMSalirActionPerformed
 
     /**

@@ -166,7 +166,7 @@ public class FormularioMaterias extends javax.swing.JInternalFrame {
         String nombre = jTNombreMateria.getText();
          if (nombre.isEmpty()) {
             JOptionPane.showMessageDialog(this, "El nombre de la materia no puede estar vacío.");
-            return; // Detener la ejecución si el nombre está vacío
+            return; 
         }
         int anio;
         try{ 

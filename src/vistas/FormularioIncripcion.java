@@ -3,6 +3,8 @@ package vistas;
 
 import Entidades.Alumno;
 import Entidades.Materia;
+import static vistas.FormularioAlumnos.alumnos;
+import static vistas.FormularioMaterias.materias;
 
 /**
  *
@@ -13,6 +15,8 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
  
     public FormularioIncripcion() {
         initComponents();
+        cargarComboMaterias();
+        cargarComboAlumnos();
     }
 
     /**
@@ -36,6 +40,11 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
 
         jBSalirIns.setForeground(new java.awt.Color(0, 102, 255));
         jBSalirIns.setText("Salir");
+        jBSalirIns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSalirInsActionPerformed(evt);
+            }
+        });
 
         jBGuardarIns.setForeground(new java.awt.Color(0, 102, 255));
         jBGuardarIns.setText("Guardar");
@@ -130,12 +139,18 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jCBoxMateriaItemStateChanged
 
     private void jCBoxMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBoxMateriaActionPerformed
-        
+        Materia materiaSeleccionada  = (Materia) jCBoxMateria.getSelectedItem();
+        materiaSeleccionada.toString();
     }//GEN-LAST:event_jCBoxMateriaActionPerformed
 
     private void jCBoxAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBoxAlumnoActionPerformed
-        
+        Alumno alumnoSelecionado = (Alumno) jCBoxAlumno.getSelectedItem();
+        alumnoSelecionado.toString();
     }//GEN-LAST:event_jCBoxAlumnoActionPerformed
+
+    private void jBSalirInsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirInsActionPerformed
+      dispose();
+    }//GEN-LAST:event_jBSalirInsActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -147,8 +162,15 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
-private void crgarComboAlumnos(){
-   
-}
 
+private void cargarComboMaterias(){
+    for (Materia materia : materias) {
+        jCBoxMateria.addItem(materia);
+    }
+}
+private void cargarComboAlumnos(){
+    for (Alumno alumno : alumnos) {
+        jCBoxAlumno.addItem(alumno);
+    }
+}
 }
