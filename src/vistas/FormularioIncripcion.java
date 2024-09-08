@@ -65,11 +65,6 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
         jLabel3.setForeground(new java.awt.Color(0, 102, 255));
         jLabel3.setText("Elija un Alumno:");
 
-        jCBoxMateria.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jCBoxMateriaItemStateChanged(evt);
-            }
-        });
         jCBoxMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCBoxMateriaActionPerformed(evt);
@@ -132,11 +127,6 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
     private void jBGuardarInsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarInsActionPerformed
         
     }//GEN-LAST:event_jBGuardarInsActionPerformed
-
-    private void jCBoxMateriaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBoxMateriaItemStateChanged
-        
-        
-    }//GEN-LAST:event_jCBoxMateriaItemStateChanged
 
     private void jCBoxMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBoxMateriaActionPerformed
         Materia materiaSeleccionada  = (Materia) jCBoxMateria.getSelectedItem();
