@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Entidades;
+package Vistas;
 
 /**
  *
@@ -55,11 +55,11 @@ public class VistaPrincipal extends javax.swing.JFrame {
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 500, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addGap(0, 377, Short.MAX_VALUE)
         );
 
         jMAlumno.setText("Alumno");
@@ -81,6 +81,16 @@ public class VistaPrincipal extends javax.swing.JFrame {
         jMenuBar.add(jMRegistro);
 
         jMSalir.setText("Salir");
+        jMSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMSalirMouseClicked(evt);
+            }
+        });
+        jMSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMSalirActionPerformed(evt);
+            }
+        });
         jMenuBar.add(jMSalir);
 
         setJMenuBar(jMenuBar);
@@ -97,11 +107,24 @@ public class VistaPrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMIAgregarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIAgregarAlumnoActionPerformed
         // TODO add your handling code here:
+        jIFagregarAlumno vista = new jIFagregarAlumno();
+        escritorio.add(vista);
+        vista.show();
     }//GEN-LAST:event_jMIAgregarAlumnoActionPerformed
+
+    private void jMSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMSalirActionPerformed
+
+    }//GEN-LAST:event_jMSalirActionPerformed
+
+    private void jMSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMSalirMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMSalirMouseClicked
 
     /**
      * @param args the command line arguments
