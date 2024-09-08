@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package vistas;
 
 /**
@@ -137,8 +134,7 @@ public class escritorio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMSalirActionPerformed
-         
-        
+
     }//GEN-LAST:event_jMSalirActionPerformed
 
     /**
@@ -169,10 +165,8 @@ public class escritorio extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new escritorio().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new escritorio().setVisible(true);
         });
     }
 
