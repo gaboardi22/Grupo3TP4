@@ -14,7 +14,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
      * Creates new form VistaPrincipal
      */
     public VistaPrincipal() {
-       
+
         initComponents();
     }
 
@@ -33,6 +33,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         jMAlumno = new javax.swing.JMenu();
         jMIAgregarAlumno = new javax.swing.JMenuItem();
         jMMaterias = new javax.swing.JMenu();
+        jMIaagregarMateria = new javax.swing.JMenuItem();
         jMRegistro = new javax.swing.JMenu();
         jMSalir = new javax.swing.JMenu();
 
@@ -75,9 +76,28 @@ public class VistaPrincipal extends javax.swing.JFrame {
         jMenuBar.add(jMAlumno);
 
         jMMaterias.setText("Materia");
+
+        jMIaagregarMateria.setText("Agregar materia");
+        jMIaagregarMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMIaagregarMateriaActionPerformed(evt);
+            }
+        });
+        jMMaterias.add(jMIaagregarMateria);
+
         jMenuBar.add(jMMaterias);
 
         jMRegistro.setText("Registro");
+        jMRegistro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMRegistroMouseClicked(evt);
+            }
+        });
+        jMRegistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMRegistroActionPerformed(evt);
+            }
+        });
         jMenuBar.add(jMRegistro);
 
         jMSalir.setText("Salir");
@@ -126,6 +146,27 @@ public class VistaPrincipal extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jMSalirMouseClicked
 
+    private void jMIaagregarMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIaagregarMateriaActionPerformed
+        // TODO add your handling code here:
+        jIFagregarMateria vista = new jIFagregarMateria();
+        escritorio.add(vista);
+        vista.show();
+    }//GEN-LAST:event_jMIaagregarMateriaActionPerformed
+
+    private void jMRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMRegistroActionPerformed
+        // TODO add your handling code here:
+        jIFFormularioInscripcion vista = new jIFFormularioInscripcion();
+        escritorio.add(vista);
+        vista.show();
+    }//GEN-LAST:event_jMRegistroActionPerformed
+
+    private void jMRegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMRegistroMouseClicked
+        // TODO add your handling code here:
+        jIFFormularioInscripcion vista = new jIFFormularioInscripcion();
+        escritorio.add(vista);
+        vista.show();
+    }//GEN-LAST:event_jMRegistroMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -166,6 +207,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JMenu jMAlumno;
     private javax.swing.JMenuItem jMIAgregarAlumno;
+    private javax.swing.JMenuItem jMIaagregarMateria;
     private javax.swing.JMenu jMMaterias;
     private javax.swing.JMenu jMRegistro;
     private javax.swing.JMenu jMSalir;

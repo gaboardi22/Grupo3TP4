@@ -138,9 +138,7 @@ public class jIFFormularioInscripcion extends javax.swing.JInternalFrame {
 
     private void jBnuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBnuevoActionPerformed
         // TODO add your handling code here:
-        jTFlegajo.setText("");
-        jTFapellido.setText("");
-        jTFnombre.setText("");
+
     }//GEN-LAST:event_jBnuevoActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
