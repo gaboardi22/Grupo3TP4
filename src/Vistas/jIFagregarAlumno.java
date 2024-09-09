@@ -4,6 +4,9 @@
  */
 package Vistas;
 
+import Entidades.Alumno;
+import static Vistas.VistaPrincipal.ALUMNOS;
+
 /**
  *
  * @author Ezequiel
@@ -79,6 +82,11 @@ public class jIFagregarAlumno extends javax.swing.JInternalFrame {
 
         jBguardar.setForeground(new java.awt.Color(0, 102, 255));
         jBguardar.setText("Guardar");
+        jBguardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBguardarActionPerformed(evt);
+            }
+        });
 
         jBnuevo.setForeground(new java.awt.Color(0, 102, 255));
         jBnuevo.setText("Nuevo");
@@ -197,6 +205,12 @@ public class jIFagregarAlumno extends javax.swing.JInternalFrame {
     private void jTFlegajoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTFlegajoKeyTyped
         // TODO add your handling code here:
     }//GEN-LAST:event_jTFlegajoKeyTyped
+
+    private void jBguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBguardarActionPerformed
+        // TODO add your handling code here:
+        //int legajo = Integer.parseInt(jTFlegajo.getText());
+        //ALUMNOS.add(new Alumno(legajo,jTFapellido.getText(),jTFnombre.getText()));
+    }//GEN-LAST:event_jBguardarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

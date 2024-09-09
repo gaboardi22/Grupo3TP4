@@ -4,12 +4,17 @@
  */
 package Vistas;
 
+import Entidades.Alumno;
+import Entidades.Materia;
+import java.util.HashSet;
+
 /**
  *
  * @author Ezequiel
  */
 public class VistaPrincipal extends javax.swing.JFrame {
-
+    public static HashSet<Alumno> ALUMNOS;
+    public static HashSet<Materia> MATERIAS;
     /**
      * Creates new form VistaPrincipal
      */
