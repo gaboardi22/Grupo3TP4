@@ -1,4 +1,4 @@
-/*
+            /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
@@ -6,18 +6,21 @@ package Vistas;
 
 import Entidades.Alumno;
 import static Vistas.VistaPrincipal.ALUMNOS;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Ezequiel
  */
 public class jIFagregarAlumno extends javax.swing.JInternalFrame {
-
+    private DefaultTableModel modelo = new DefaultTableModel();
     /**
      * Creates new form jIFagregarAlumno
      */
     public jIFagregarAlumno() {
         initComponents();
+                armarCabecera();
     }
 
     /**
@@ -40,6 +43,8 @@ public class jIFagregarAlumno extends javax.swing.JInternalFrame {
         jBguardar = new javax.swing.JButton();
         jBnuevo = new javax.swing.JButton();
         jBsalir = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtAlumnos = new javax.swing.JTable();
 
         jLFormulariodeAlumno.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLFormulariodeAlumno.setForeground(new java.awt.Color(0, 102, 255));
@@ -104,32 +109,20 @@ public class jIFagregarAlumno extends javax.swing.JInternalFrame {
             }
         });
 
+        jtAlumnos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(jtAlumnos);
+
         javax.swing.GroupLayout jPanelLayout = new javax.swing.GroupLayout(jPanel);
         jPanel.setLayout(jPanelLayout);
         jPanelLayout.setHorizontalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
-                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelLayout.createSequentialGroup()
-                                .addComponent(jLnombre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTFnombre))
-                            .addGroup(jPanelLayout.createSequentialGroup()
-                                .addComponent(jLlegajo)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTFlegajo, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanelLayout.createSequentialGroup()
-                                .addComponent(jLapellido)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTFapellido))))
-                    .addGroup(jPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLFormulariodeAlumno)))
-                .addGap(63, 63, 63))
             .addGroup(jPanelLayout.createSequentialGroup()
                 .addGap(113, 113, 113)
                 .addComponent(jBguardar)
@@ -138,6 +131,29 @@ public class jIFagregarAlumno extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jBsalir)
                 .addContainerGap(54, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLFormulariodeAlumno))
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelLayout.createSequentialGroup()
+                                .addComponent(jLnombre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTFnombre))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelLayout.createSequentialGroup()
+                                .addComponent(jLlegajo)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTFlegajo, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelLayout.createSequentialGroup()
+                                .addComponent(jLapellido)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTFapellido)))))
+                .addGap(63, 63, 63))
         );
         jPanelLayout.setVerticalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,7 +172,9 @@ public class jIFagregarAlumno extends javax.swing.JInternalFrame {
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLnombre)
                     .addComponent(jTFnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBguardar)
                     .addComponent(jBnuevo)
@@ -208,8 +226,14 @@ public class jIFagregarAlumno extends javax.swing.JInternalFrame {
 
     private void jBguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBguardarActionPerformed
         // TODO add your handling code here:
-        //int legajo = Integer.parseInt(jTFlegajo.getText());
-        //ALUMNOS.add(new Alumno(legajo,jTFapellido.getText(),jTFnombre.getText()));
+        try{
+        ALUMNOS.add(new Alumno(Integer.parseInt(jTFlegajo.getText()),jTFapellido.getText(),jTFnombre.getText()));
+        this.cargarDatos(new Alumno(Integer.parseInt(jTFlegajo.getText()),jTFapellido.getText(),jTFnombre.getText()));
+        JOptionPane.showMessageDialog(this,"Datos ingresados correctamente");
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(this,"Error al ingresar el legajo");
+        }
+         
     }//GEN-LAST:event_jBguardarActionPerformed
 
 
@@ -222,8 +246,19 @@ public class jIFagregarAlumno extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLlegajo;
     private javax.swing.JLabel jLnombre;
     private javax.swing.JPanel jPanel;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTFapellido;
     private javax.swing.JTextField jTFlegajo;
     private javax.swing.JTextField jTFnombre;
+    private javax.swing.JTable jtAlumnos;
     // End of variables declaration//GEN-END:variables
+    private void armarCabecera(){
+    modelo.addColumn("Legajo");
+    modelo.addColumn("Apellido");
+    modelo.addColumn("Nombre");
+    jtAlumnos.setModel(modelo);
+    }
+    private void cargarDatos(Alumno alumno){
+    modelo.addRow(new Object[]{jTFlegajo.getText(),jTFapellido.getText(),jTFnombre.getText()});
+    }
 }

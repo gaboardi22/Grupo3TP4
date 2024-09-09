@@ -4,6 +4,11 @@
  */
 package Vistas;
 
+import Entidades.Alumno;
+import Entidades.Materia;
+import static Vistas.VistaPrincipal.ALUMNOS;
+import static Vistas.VistaPrincipal.MATERIAS;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Ezequiel
@@ -15,6 +20,7 @@ public class jIFFormularioInscripcion extends javax.swing.JInternalFrame {
      */
     public jIFFormularioInscripcion() {
         initComponents();
+        this.cargarCombo();
     }
 
     /**
@@ -32,8 +38,8 @@ public class jIFFormularioInscripcion extends javax.swing.JInternalFrame {
         jLapellido = new javax.swing.JLabel();
         jBnuevo = new javax.swing.JButton();
         jBsalir = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jCBmaterias = new javax.swing.JComboBox<>();
+        jCBalumnos = new javax.swing.JComboBox<>();
 
         jLFormulariodeAlumno.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLFormulariodeAlumno.setForeground(new java.awt.Color(0, 102, 255));
@@ -63,14 +69,19 @@ public class jIFFormularioInscripcion extends javax.swing.JInternalFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jCBmaterias.setModel(new javax.swing.DefaultComboBoxModel<>());
+        jCBmaterias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jCBmateriasActionPerformed(evt);
             }
         });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCBalumnos.setModel(new javax.swing.DefaultComboBoxModel<>());
+        jCBalumnos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCBalumnosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelLayout = new javax.swing.GroupLayout(jPanel);
         jPanel.setLayout(jPanelLayout);
@@ -85,8 +96,8 @@ public class jIFFormularioInscripcion extends javax.swing.JInternalFrame {
                             .addComponent(jLapellido))
                         .addGap(18, 18, 18)
                         .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox1, 0, 142, Short.MAX_VALUE)
-                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jCBmaterias, 0, 142, Short.MAX_VALUE)
+                            .addComponent(jCBalumnos, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanelLayout.createSequentialGroup()
                         .addGap(95, 95, 95)
                         .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -105,11 +116,11 @@ public class jIFFormularioInscripcion extends javax.swing.JInternalFrame {
                 .addGap(31, 31, 31)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLlegajo)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCBmaterias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLapellido)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jCBalumnos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBnuevo)
@@ -138,22 +149,41 @@ public class jIFFormularioInscripcion extends javax.swing.JInternalFrame {
 
     private void jBnuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBnuevoActionPerformed
         // TODO add your handling code here:
-
+        JOptionPane.showMessageDialog(this, "Agregado correctamente");
     }//GEN-LAST:event_jBnuevoActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jCBmateriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBmateriasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+        Materia materiaSeleccionada  = (Materia) jCBmaterias.getSelectedItem();
+        materiaSeleccionada.toString();
+    }//GEN-LAST:event_jCBmateriasActionPerformed
+
+    private void jCBalumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBalumnosActionPerformed
+        // TODO add your handling code here:
+                                         
+        Alumno alumnoSelecionado = (Alumno) jCBalumnos.getSelectedItem();
+        alumnoSelecionado.toString();
+                                               
+
+    }//GEN-LAST:event_jCBalumnosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBnuevo;
     private javax.swing.JButton jBsalir;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<Alumno> jCBalumnos;
+    private javax.swing.JComboBox<Materia> jCBmaterias;
     private javax.swing.JLabel jLFormulariodeAlumno;
     private javax.swing.JLabel jLapellido;
     private javax.swing.JLabel jLlegajo;
     private javax.swing.JPanel jPanel;
     // End of variables declaration//GEN-END:variables
+    private void cargarCombo(){
+        for (Alumno alumno : ALUMNOS) {
+            jCBalumnos.addItem(alumno);
+        }
+        for (Materia materia : MATERIAS) {
+            jCBmaterias.addItem(materia);
+        }
+    }
 }

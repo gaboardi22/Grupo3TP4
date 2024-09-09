@@ -13,14 +13,20 @@ import java.util.HashSet;
  * @author Ezequiel
  */
 public class VistaPrincipal extends javax.swing.JFrame {
-    public static HashSet<Alumno> ALUMNOS;
-    public static HashSet<Materia> MATERIAS;
+    public static HashSet<Alumno> ALUMNOS;static {
+    ALUMNOS = new HashSet<>();
+}
+    public static HashSet<Materia> MATERIAS;static {
+    MATERIAS = new HashSet<>();
+}
+    
     /**
      * Creates new form VistaPrincipal
      */
     public VistaPrincipal() {
 
         initComponents();
+
     }
 
     /**

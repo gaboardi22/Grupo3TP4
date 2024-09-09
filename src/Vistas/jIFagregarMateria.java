@@ -4,17 +4,25 @@
  */
 package Vistas;
 
+import Entidades.Materia;
+import static Vistas.VistaPrincipal.MATERIAS;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Ezequiel
  */
 public class jIFagregarMateria extends javax.swing.JInternalFrame {
 
+    DefaultTableModel modelo = new DefaultTableModel();
+
     /**
      * Creates new form jIFagregarAlumno
      */
     public jIFagregarMateria() {
         initComponents();
+        this.agregarColumnas();
     }
 
     /**
@@ -37,6 +45,8 @@ public class jIFagregarMateria extends javax.swing.JInternalFrame {
         jBguardar = new javax.swing.JButton();
         jBnuevo = new javax.swing.JButton();
         jBsalir = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtMaterias = new javax.swing.JTable();
 
         jLFormulariodeMaterias.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLFormulariodeMaterias.setForeground(new java.awt.Color(0, 102, 255));
@@ -79,6 +89,11 @@ public class jIFagregarMateria extends javax.swing.JInternalFrame {
 
         jBguardar.setForeground(new java.awt.Color(0, 102, 255));
         jBguardar.setText("Guardar");
+        jBguardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBguardarActionPerformed(evt);
+            }
+        });
 
         jBnuevo.setForeground(new java.awt.Color(0, 102, 255));
         jBnuevo.setText("Nuevo");
@@ -95,6 +110,19 @@ public class jIFagregarMateria extends javax.swing.JInternalFrame {
                 jBsalirActionPerformed(evt);
             }
         });
+
+        jtMaterias.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jtMaterias);
 
         javax.swing.GroupLayout jPanelLayout = new javax.swing.GroupLayout(jPanel);
         jPanel.setLayout(jPanelLayout);
@@ -114,10 +142,10 @@ public class jIFagregarMateria extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTFAñodelaMateria)
+                            .addComponent(jTFnombredeMateria)
                             .addGroup(jPanelLayout.createSequentialGroup()
-                                .addComponent(jTFcodigodeMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jTFnombredeMateria)))
+                                .addComponent(jTFcodigodeMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelLayout.createSequentialGroup()
                         .addGap(113, 113, 113)
                         .addComponent(jBguardar)
@@ -125,8 +153,11 @@ public class jIFagregarMateria extends javax.swing.JInternalFrame {
                         .addComponent(jBnuevo)
                         .addGap(18, 18, 18)
                         .addComponent(jBsalir)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 45, Short.MAX_VALUE)))
                 .addGap(54, 54, 54))
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelLayout.setVerticalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,7 +175,9 @@ public class jIFagregarMateria extends javax.swing.JInternalFrame {
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlAñodeMateria)
                     .addComponent(jTFAñodelaMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBguardar)
                     .addComponent(jBnuevo)
@@ -194,6 +227,17 @@ public class jIFagregarMateria extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTFcodigodeMateriaKeyTyped
 
+    private void jBguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBguardarActionPerformed
+        // TODO add your handling code here:
+        try {
+            MATERIAS.add(new Materia(Integer.parseInt(jTFcodigodeMateria.getText()), jTFnombredeMateria.getText(), Integer.parseInt(jTFAñodelaMateria.getText())));
+            modelo.addRow(new Object[]{jTFcodigodeMateria.getText(), jTFnombredeMateria.getText(), jTFAñodelaMateria.getText()});
+            JOptionPane.showMessageDialog(this, "Datos ingresados correctamente");
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Error al ingresar los datos");
+        }
+    }//GEN-LAST:event_jBguardarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBguardar;
@@ -203,9 +247,17 @@ public class jIFagregarMateria extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLcodigodemateria;
     private javax.swing.JLabel jLnombredeMateria;
     private javax.swing.JPanel jPanel;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTFAñodelaMateria;
     private javax.swing.JTextField jTFcodigodeMateria;
     private javax.swing.JTextField jTFnombredeMateria;
     private javax.swing.JLabel jlAñodeMateria;
+    private javax.swing.JTable jtMaterias;
     // End of variables declaration//GEN-END:variables
+    private void agregarColumnas() {
+        modelo.addColumn("Codigo");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Año");
+        jtMaterias.setModel(modelo);
+    }
 }

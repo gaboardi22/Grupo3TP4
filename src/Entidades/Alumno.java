@@ -32,7 +32,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" + "legajo=" + legajo + ", apellido=" + apellido + ", nombre=" + nombre + ", materias=" + materias + '}';
+        return legajo+","+apellido+" "+nombre;
     }
 
 }
