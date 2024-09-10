@@ -3,6 +3,7 @@ package vistas;
 
 import Entidades.Alumno;
 import Entidades.Materia;
+import javax.swing.JOptionPane;
 import static vistas.FormularioAlumnos.alumnos;
 import static vistas.FormularioMaterias.materias;
 
@@ -39,6 +40,7 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
         setClosable(true);
 
         jBSalirIns.setForeground(new java.awt.Color(0, 102, 255));
+        jBSalirIns.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/page_paper_file_document_remove_delete_icon_228133.png"))); // NOI18N
         jBSalirIns.setText("Salir");
         jBSalirIns.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,6 +49,7 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
         });
 
         jBGuardarIns.setForeground(new java.awt.Color(0, 102, 255));
+        jBGuardarIns.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/page_paper_file_document_bookmark_icon_228140.png"))); // NOI18N
         jBGuardarIns.setText("Guardar");
         jBGuardarIns.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,7 +90,7 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jBGuardarIns)
                         .addGap(18, 18, 18)
-                        .addComponent(jBSalirIns))
+                        .addComponent(jBSalirIns, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
@@ -106,15 +109,15 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jCBoxMateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCBoxAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                    .addComponent(jLabel3)
+                    .addComponent(jCBoxAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBGuardarIns)
                     .addComponent(jBSalirIns))
@@ -125,7 +128,7 @@ public class FormularioIncripcion extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBGuardarInsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarInsActionPerformed
-        
+        JOptionPane.showMessageDialog(this, "Se ha inscripto exitosamente!");
     }//GEN-LAST:event_jBGuardarInsActionPerformed
 
     private void jCBoxMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBoxMateriaActionPerformed
